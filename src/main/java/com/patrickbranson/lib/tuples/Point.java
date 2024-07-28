@@ -71,6 +71,7 @@ public final class Point extends Tuple {
      *
      * @return the String version of the Point-Tuple
      */
+    @Override
     public @NotNull String toString() {
         return "Point[x=" + this.getX() + " y=" + this.getY() + " z=" + this.getZ() + "]";
     }

@@ -58,15 +58,9 @@ public abstract sealed class Tuple permits Color, Point, Vector {
      */
     @Override
     public final boolean equals(Object object) {
-        if (this == object) {
-            return true;
-        }
-
-        if (!(object instanceof Tuple tuple)) {
-            return false;
-        }
-
-        return this.equals(tuple);
+        if (this == object) return true;
+        if (!(object instanceof Tuple tuple)) return false;
+        return this.equals(tuple); // Uses internal equals function
     }
 
     /**
