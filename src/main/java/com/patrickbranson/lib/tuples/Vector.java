@@ -18,13 +18,37 @@ package com.patrickbranson.lib.tuples;
 
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Represents a Vector in the Raytracer-Challenge
+ *
+ * @see com.patrickbranson.lib.tuples.Tuple
+ */
 public final class Vector extends Tuple {
 
+    /**
+     * Default Constructor
+     */
+    public Vector() {
+        super(0, 0, 0, 0);
+    }
+
+    /**
+     * Constructor
+     *
+     * @param x the x-coordinate value
+     * @param y the y-coordinate value
+     * @param z the z-coordinate value
+     */
     public Vector(double x, double y, double z) {
         super(x, y, z, 0);
     }
 
+    /**
+     * Overrides the {@link Object#toString()} function
+     *
+     * @return the String version of the Vector-Tuple
+     */
     public @NotNull String toString() {
-        return "Vector[x=" + this.getX() + " y=" + this.getY() + " z=" + this.getZ() + " w=" + this.getW() + "]";
+        return "Vector[x=" + this.getX() + " y=" + this.getY() + " z=" + this.getZ() + "]";
     }
 }

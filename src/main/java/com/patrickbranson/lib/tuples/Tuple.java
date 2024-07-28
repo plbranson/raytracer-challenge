@@ -22,7 +22,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Arrays;
 
 /**
- * The Tuple for the Raytracer Challenge Project
+ * The Tuple for the Raytracer-Challenge
  */
 public abstract sealed class Tuple permits Color, Point, Vector {
 
@@ -57,7 +57,7 @@ public abstract sealed class Tuple permits Color, Point, Vector {
      * @return {@code true}  if the values are equal; otherwise, {@code false}
      */
     @Override
-    public boolean equals(Object object) {
+    public final boolean equals(Object object) {
         if (this == object) {
             return true;
         }
@@ -75,7 +75,7 @@ public abstract sealed class Tuple permits Color, Point, Vector {
      * @return the new hash code value
      */
     @Override
-    public int hashCode() {
+    public final int hashCode() {
         return Arrays.hashCode(components);
     }
 
